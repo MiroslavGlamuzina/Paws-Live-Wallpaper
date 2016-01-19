@@ -14,9 +14,9 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
-        android:hardwareAccelerated="true"
-        android:icon="@android:drawable/alert_dark_frame"
-        android:label="TR Demo Live Wallpaper">
+        android:icon="@android:drawable/star_big_on"
+        android:label="TR Demo Live Wallpaper"
+        android:theme="@style/Theme.AppCompat">
         <service
             android:name="remingtonproductions.pawslivewallpaper.PawsLiveWallpaperService"
             android:label="TR Demo Live Wallpaper"
@@ -32,7 +32,10 @@
 
         <activity
             android:name="remingtonproductions.pawslivewallpaper.SettingsActivity"
-            android:label="@string/title_activity_settings">
+            android:exported="true"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/Theme.AppCompat"
+            >
         </activity>
     </application>
 
