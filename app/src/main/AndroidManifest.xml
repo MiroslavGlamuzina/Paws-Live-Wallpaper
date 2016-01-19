@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.authorwjf.live_wallpaper_p1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="1.0">
 
+    <uses-sdk android:minSdkVersion="7"/>
 
-<manifest package="com.authorwjf.live_wallpaper_p1"
+    <uses-feature android:name="android.software.live_wallpaper"/>
 
-
-          xmlns:android="http://schemas.android.com/apk/res/android"
-          android:versionCode="1"
-          android:versionName="1.0">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
+        android:hardwareAccelerated="true"
         android:icon="@android:drawable/alert_dark_frame"
         android:label="TR Demo Live Wallpaper">
         <service
             android:name="remingtonproductions.pawslivewallpaper.PawsLiveWallpaperService"
             android:label="TR Demo Live Wallpaper"
-
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService"/>
             </intent-filter>
+
             <meta-data
                 android:name="android.service.wallpaper"
                 android:resource="@xml/wallpaper"/>
         </service>
+
+        <activity
+            android:name="remingtonproductions.pawslivewallpaper.SettingsActivity"
+            android:label="@string/title_activity_settings">
+        </activity>
     </application>
-    <uses-sdk android:minSdkVersion="7"/>
-    <uses-feature android:name="android.software.live_wallpaper"/>
+
 </manifest>
