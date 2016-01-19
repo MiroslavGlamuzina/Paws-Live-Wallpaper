@@ -3,18 +3,28 @@
     <!-- These settings headers are only used on tablets. -->
 
     <header
-        android:fragment="remingtonproductions.pawslivewallpaper.SettingsActivity$GeneralPreferenceFragment"
+        android:fragment="remingtonproductions.pawslivewallpaper.SettingsActivity$ColorPreferenceFragment"
         android:icon="@drawable/ic_info_black_24dp"
         android:title="@string/pref_header_general"/>
 
     <header
-        android:fragment="remingtonproductions.pawslivewallpaper.SettingsActivity$NotificationPreferenceFragment"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:fragment="remingtonproductions.pawslivewallpaper.SettingsActivity$AnimationPreferenceFragment"
+        android:icon="@android:drawable/presence_audio_online"
         android:title="@string/pref_header_notifications"/>
 
     <header
-        android:fragment="remingtonproductions.pawslivewallpaper.SettingsActivity$DataSyncPreferenceFragment"
-        android:icon="@drawable/ic_sync_black_24dp"
-        android:title="@string/pref_header_data_sync"/>
+        android:fragment="remingtonproductions.pawslivewallpaper.SettingsActivity$ProfilePreferenceFragment"
+        android:icon="@android:drawable/ic_delete"
+        android:title="@string/pref_header_profile"/>
+
+    <header
+        android:fragment="remingtonproductions.pawslivewallpaper.SettingsActivity$SharePreferenceFragment"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/pref_header_share"/>
+
+    <header
+        android:fragment="remingtonproductions.pawslivewallpaper.SettingsActivity$RatePreferenceFragment"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="@string/pref_header_rate"/>
 
 </preference-headers>

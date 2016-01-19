@@ -1,0 +1,54 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Create Custom Color">
+        <Preference
+            android:key="color_custom"
+            android:title="Custom Color"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Default Colors">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="color_one"
+            android:summaryOff="Enable color"
+            android:summaryOn="Disable color"
+            android:title="Color one"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="color_one"
+            android:summaryOff="Enable color"
+            android:summaryOn="Disable color"
+            android:title="Color two"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="color_one"
+            android:summaryOff="Enable color"
+            android:summaryOn="Disable color"
+            android:title="Color three"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="color_one"
+            android:summaryOff="Enable color"
+            android:summaryOn="Disable color"
+            android:title="Color four"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="color_one"
+            android:summaryOff="Enable color"
+            android:summaryOn="Disable color"
+            android:title="Color five"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="color_one"
+            android:summaryOff="Enable color"
+            android:summaryOn="Disable color"
+            android:title="Color six"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="color_one"
+            android:summaryOff="Enable color"
+            android:summaryOn="Disable color"
+            android:title="Color seven"/>
+    </PreferenceCategory>
+</PreferenceScreen>

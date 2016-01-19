@@ -1,0 +1,11 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:selectable="false"
+
+    >
+    <Preference
+        android:selectable="false"
+        android:title="Thank You For Rating! :)"
+        ></Preference>
+
+
+</PreferenceScreen>

@@ -12,16 +12,26 @@ import android.view.SurfaceHolder;
 import com.authorwjf.live_wallpaper_p1.R;
 
 public class PawsLiveWallpaperService extends WallpaperService {
-    Bitmap image = null;
-    float x, y;
-    int pad = 100;
-    int color;
+    private Bitmap image = null;
+    private final int UPDATE_INTERVAL = 15;
+    private float x, y;
+    private int bg_size = 0;
+
+    public static int color;
+    public static float speed;
+    public static int alpha;
+
     @Override
     public Engine onCreateEngine() {
         image = BitmapFactory.decodeResource(getResources(), R.drawable.more_tiny_paws);
         x = 0;
         y = 0;
+        bg_size = image.getWidth() * 2;
+
+        //global user settings
         color = Color.parseColor("#FFB266");
+        speed = 0.5f;
+        alpha = 150;
         return new WallpaperEngine();
     }
 
@@ -36,8 +46,6 @@ public class PawsLiveWallpaperService extends WallpaperService {
         };
 
         private void draw() {
-            x += 0.5;
-            y += 0.5;
             SurfaceHolder holder = getSurfaceHolder();
             Canvas c = null;
             try {
@@ -46,12 +54,15 @@ public class PawsLiveWallpaperService extends WallpaperService {
                     Paint p = new Paint();
                     p.setAntiAlias(true);
                     p.setColor(color);
-                    c.drawRect(0, 0, image.getWidth() * 2, image.getHeight() * 2, p);
-                    p.setAlpha(150);
+                    c.drawRect(0, 0, bg_size, bg_size, p);
+                    p.setAlpha(alpha);
                     c.drawBitmap(image, x, y, p);
-                    c.drawBitmap(image, x - image.getWidth(), y, null);
-                    c.drawBitmap(image, x, y - image.getHeight(), null);
-                    c.drawBitmap(image, x - image.getWidth(), y - image.getHeight(), null);
+                    c.drawBitmap(image, x - image.getWidth(), y, p);
+                    c.drawBitmap(image, x, y - image.getHeight(), p);
+                    c.drawBitmap(image, x - image.getWidth(), y - image.getHeight(), p);
+
+                    x += speed;
+                    y += speed;
                 }
             } finally {
                 if (c != null)
@@ -59,7 +70,7 @@ public class PawsLiveWallpaperService extends WallpaperService {
             }
             mHandler.removeCallbacks(mUpdateDisplay);
             if (mVisible) {
-                mHandler.postDelayed(mUpdateDisplay, 10);
+                mHandler.postDelayed(mUpdateDisplay, UPDATE_INTERVAL);
             }
             if (Math.abs(x) >= Math.abs(image.getWidth())) {
                 x = y = 0;
