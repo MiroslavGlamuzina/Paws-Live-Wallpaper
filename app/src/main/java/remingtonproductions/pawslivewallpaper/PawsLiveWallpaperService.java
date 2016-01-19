@@ -35,7 +35,7 @@ public class PawsLiveWallpaperService extends WallpaperService {
                     int y = c.getHeight()/2;
                     p.setColor(Color.MAGENTA);
                     c.drawRect(0, 0, c.getWidth(), c.getHeight(), p);
-//                    p.setColor(Color.WHITE);
+                    p.setColor(Color.WHITE);
 //                    p.setTextSize(300f);
 //                    c.drawText(text, x, y, p);
                 }
