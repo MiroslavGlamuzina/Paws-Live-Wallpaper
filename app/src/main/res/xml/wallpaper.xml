@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<wallpaper
+    android:thumbnail="@android:drawable/star_big_on"
+    android:description="@string/app_name"
+    xmlns:android="http://schemas.android.com/apk/res/android"/>
