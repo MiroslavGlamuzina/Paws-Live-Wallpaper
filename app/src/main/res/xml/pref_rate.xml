@@ -4,7 +4,8 @@
     >
     <Preference
         android:selectable="false"
-        android:title="Thank You For Rating! :)"
+        android:title="Thank You   :)"
+        android:summary="Thanks your for using our app! :) "
         ></Preference>
 
 

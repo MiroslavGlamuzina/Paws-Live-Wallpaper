@@ -2,53 +2,50 @@
 
     <PreferenceCategory
         android:title="Create Custom Color">
-        <Preference
-            android:key="color_custom"
-            android:title="Custom Color"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/pref_color_color_custom"
+            android:summaryOn="Color Enabled! :) :) :)"
+            android:title="My Custom Color"/>
     </PreferenceCategory>
+
     <PreferenceCategory
         android:title="Default Colors">
         <CheckBoxPreference
             android:defaultValue="false"
-            android:key="color_one"
-            android:summaryOff="Enable color"
-            android:summaryOn="Disable color"
-            android:title="Color one"/>
+            android:key="@string/pref_color_color_seven"
+            android:summaryOn="Color Enabled! :) :) :)"
+            android:title="Strawberry mustang"/>
         <CheckBoxPreference
             android:defaultValue="false"
-            android:key="color_one"
-            android:summaryOff="Enable color"
-            android:summaryOn="Disable color"
-            android:title="Color two"/>
+            android:key="@string/pref_color_color_five"
+            android:summaryOn="Color Enabled! :) :) :)"
+            android:title="What Things are Lavender Color?"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_color_color_one"
+            android:summaryOn="Color Enabled! :) :) :)"
+            android:title="Minty Shamrock shake"/>
         <CheckBoxPreference
             android:defaultValue="false"
-            android:key="color_one"
-            android:summaryOff="Enable color"
-            android:summaryOn="Disable color"
-            android:title="Color three"/>
+            android:key="@string/pref_color_color_two"
+            android:summaryOn="Color Enabled! :) :) :)"
+            android:title="Pale Blue Sky"/>
         <CheckBoxPreference
             android:defaultValue="false"
-            android:key="color_one"
-            android:summaryOff="Enable color"
-            android:summaryOn="Disable color"
-            android:title="Color four"/>
+            android:key="@string/pref_color_color_three"
+            android:summaryOn="Color Enabled! :) :) :)"
+            android:title="A Slightly Pink Macaroon Hue"/>
         <CheckBoxPreference
             android:defaultValue="false"
-            android:key="color_one"
-            android:summaryOff="Enable color"
-            android:summaryOn="Disable color"
-            android:title="Color five"/>
+            android:key="@string/pref_color_color_four"
+            android:summaryOn="Color Enabled! :) :) :)"
+            android:title="Remington Boogers"/>
         <CheckBoxPreference
             android:defaultValue="false"
-            android:key="color_one"
-            android:summaryOff="Enable color"
-            android:summaryOn="Disable color"
-            android:title="Color six"/>
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="color_one"
-            android:summaryOff="Enable color"
-            android:summaryOn="Disable color"
-            android:title="Color seven"/>
+            android:key="@string/pref_color_color_six"
+            android:summaryOn="Color Enabled! :) :) :)"
+            android:title="Too Bright and Shiny Yellow"/>
+
     </PreferenceCategory>
 </PreferenceScreen>
